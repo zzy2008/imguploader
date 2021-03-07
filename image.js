@@ -12,7 +12,7 @@ app.use(express.static('../../upload'))
 
 // 上传图片
 app.post('/upload', (req, res, next) => {
-  let defaultPath = '/upload/';
+  let defaultPath = '../upload/';
   let uploadDir = path.join(__dirname, defaultPath);
   let form = new formidable.IncomingForm();
   let getRandomID = () => Number(Math.random().toString().substr(4, 10) + Date.now()).toString(36)
@@ -34,7 +34,7 @@ app.post('/upload', (req, res, next) => {
     console.log("backName: " + backName);
     console.log("oldPath: " + oldPath);
     console.log("newPath: " + newPath);
-    fs.rename("upload/" + oldPath, "upload/" + newPath, (err) => { //fs.rename重命名
+    fs.rename(defaultPath + oldPath, defaultPath + newPath, (err) => { //fs.rename重命名
       if (!err) {
         console.log("rename success");
         newPath = `http://localhost:${listenNumber}/${newPath}`
