@@ -1,0 +1,22 @@
+{
+  "name": "imguploader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "image.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "formidable": "^1.2.2",
+    "fs": "^0.0.1-security",
+    "imageinfo": "^1.0.4",
+    "multer": "^1.4.2",
+    "multiparty": "^4.2.2",
+    "path": "^0.12.7",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node image.js"
+  },
+  "author": "zzy",
+  "license": "ISC"
+}
